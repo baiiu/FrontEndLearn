@@ -1,0 +1,115 @@
+<html>
+
+<head>
+    <title>学习JS基础</title>
+    <meta charset="utf-8" />
+
+    <!-- <script type="text/javascript" src="learn.js"></script> -->
+    <!-- <script type="text/javascript" src="learnStatements.js"></script> -->
+
+
+    <script type="text/javascript">
+        function showMultiplication(number) {
+            //绝不要使用在文档加载之后使用 document.write()。这会覆盖该文档。
+            document.write("<table border='0' align='center' width='60%'>");
+            document.write("<caption>九九乘法表</caption>");
+
+            var j;
+            for (var i = 1; i <= number; i++) {
+                document.write("<tr>");
+                for (j = 1; j <= i; j++) {
+                    document.write("<td>" + i + " * " + j + "=" + i * j + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+
+        function showMultiplication2(number) {
+
+            var s = "<table border='0' align='center' width='100%'>";
+            // s = s + "<caption>九九乘法表</caption>";
+
+            var j;
+            for (var i = 1; i <= number; i++) {
+                s = s + "<tr>";
+                for (j = 1; j <= i; j++) {
+                    s = s + "<td>" + i + " * " + j + "=" + i * j + "</td>";
+                }
+                s = s + "</tr>";
+            }
+            s = s + "</table>";
+
+            var divNode = document.getElementById("result");
+            divNode.innerHTML = s;
+        }
+
+        //使用document创建对象
+        function showMultiplication3(number) {
+            var divNode = document.getElementById("result");
+
+            var tableNode = document.createElement("table");
+            tableNode.border = "0";
+            tableNode.align = "center";
+            tableNode.width = "100%";
+
+            var j;
+            for (var i = 1; i <= number; i++) {
+                var trNode = tableNode.insertRow();
+                for (j = 1; j <= i; j++) {
+                    var tdNode = trNode.insertCell();
+                    tdNode.innerText = i + " * " + j + "=" + i * j;
+                }
+            }
+
+            var oldChildrens = divNode.children;
+            if (oldChildrens.length == 0) {
+                divNode.appendChild(tableNode);
+            } else {
+                divNode.replaceChild(tableNode, oldChildrens[0]);
+            }
+        }
+
+        function show() {
+            var numberNode = document.getElementById("number");
+            var number = numberNode.value;
+
+            if ("" == number) {
+                alert("不能为空");
+                numberNode.focus();
+                return;
+            }
+
+            numberNode.value = "";
+            numberNode.focus();
+
+            // showMultiplication2(number);
+            showMultiplication3(parseInt(number));
+        }
+        // function showMultiplication(var a){
+        //   alert("不能函数重载，不要起相同函数名");
+        // }
+
+
+        b = function() {
+            alert("匿名函数");
+        }
+
+        // onload = b;//赋值给onload事件
+    </script>
+</head>
+
+<body>
+
+    <input type="text" id="number" />
+    <input type="button" value="计算" onclick="show()" />
+
+    <div id="result">
+
+    </div>
+
+
+
+</body>
+
+</html>

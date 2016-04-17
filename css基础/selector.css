@@ -1,0 +1,60 @@
+.one {
+    /*
+  类选择器，以 . 标识，后跟 类名。
+  */
+    text-align: right;
+    font-size: 15;
+}
+.important {
+    color: red;
+    font-size: 15;
+}
+h1.important {
+    /*类选择器，选择器连用*/
+    color: blue;
+    font-size: 30;
+}
+#two {
+    /*
+  id选择器，以 #标识。
+  */
+    color: #987652;
+    text-align: right;
+}
+[title] {
+    /*属性选择器*/
+    color: red;
+}
+span {
+    background-color: white;
+}
+div span {
+    /*
+  后代选择器，元素1 元素2 {样式声明 }
+  */
+    background-color: DodgerBlue;
+}
+p, b, u {
+    /*
+分组选择器，元素1, 元素2 {样式声明 }
+*/
+    color: #ff0000;
+}
+
+/*伪类选择器*/
+
+a:link {
+    /* 未访问的链接 */
+    color: #FF0000
+}
+a:visited {
+    /* 已访问的链接 */
+    color: #00FF00
+}
+a:hover {
+    /* 鼠标移动到链接上 */
+    color: #123456
+}
+a:active {
+    color: #0000FF
+}

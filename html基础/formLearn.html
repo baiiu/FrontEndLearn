@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<!--
+
+页面的头部表示了w3c的规范信息
+dtd文件：约束文件，约束了html应该有的标签，以及标签如何嵌套
+
+ -->
+
+<head>
+    <title>表单学习</title>
+    <meta charset="utf-8" />
+</head>
+
+<!--
+
+http://www.w3school.com.cn/html/html_forms.asp
+
+form 表单标签
+  action: 要提交的地址
+  method: 请求方式
+
+input标签：输入框
+  type属性，表示该输入框输入类型
+  name属性，用于服务器取值使用
+  id属性：用于js取值
+  size属性：文本框长度
+  value属性：默认显示
+  readonly="readonly"属性： 只读
+
+  <input type="button" value="普通按钮" />
+
+
+-->
+
+<body>
+
+    <!--
+      1. 提交时提交到服务器
+        http:// ip地址 ： port
+        http://192.168.1.9:10000
+
+      2. GET和POST提交方式
+
+      GET:
+        把数据包装在请求头中，数据有限制，速度快。
+        地址栏可以看到请求数据，不安全。
+        可以或直接看到： http://192.168.1.9:10000/?username=&password=&sex=%E7%94%B7&province=%E5%8C%97%E4%BA%AC&description=&file=
+
+      POST:
+        请求头和请求体分开，数据包装在请求体中。
+        数据无限制，安全，速度慢。
+
+    -->
+
+    <form action="http://192.168.1.9:10000" method="post">
+        <table border="1" align="center" cellspacing="0" cellpadding="10" width="500">
+            <caption>
+                <font size="5"><b>用户注册</b></font>
+            </caption>
+            <tr>
+                <td>
+                    用户名：
+                </td>
+                <td>
+                    <input type="text" name="username" id="username" value="" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    密码：
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    性别：
+                </td>
+                <td>
+                    <input type="radio" name="sex" id="man" value="男" checked="checked" />男
+                    <input type="radio" name="sex" id="woman" value="女" />女
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    爱好：
+                </td>
+                <td>
+                    <input type="checkbox" name="hobby" id="chese" value="chese" /> 象棋
+                    <input type="checkbox" name="hobby" id="running" value="running" /> 跑步
+                    <input type="checkbox" name="hobby" id="read" value="read" /> 看书
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    省份：
+                </td>
+                <td>
+                    <select name="province" id="province">
+                        <option selected="selected" value="北京">
+                            北京
+                        </option>
+                        <option value="上海">
+                            上海
+                        </option>
+                        <option value="深圳">
+                            深圳
+                        </option>
+                        <option value="广州">
+                            广州
+                        </option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    描述你自己：
+                </td>
+                <td>
+                    <textarea rows="10" cols="40" name="description" id="description"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    上传身份证：
+                </td>
+                <td>
+                    <input type="file" name="file" id="file" />
+                </td>
+            </tr>
+
+            <tr align="right">
+                <td colspan="2">
+                    <input type="reset" value="重填" />
+                    <input type="submit" value="提交" />
+                </td>
+            </tr>
+
+
+
+
+        </table>
+    </form>
+
+
+
+</body>
+
+
+</html>

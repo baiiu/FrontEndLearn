@@ -1,0 +1,417 @@
+<html>
+
+<head>
+    <title>Hello HTML</title>
+    <meta charset="utf-8" />
+</head>
+
+<body>
+    Hello HTML,这是最基础的格式。在这块学习一些标签。
+
+    <h1>基础标签学习：</h1>
+
+    <!-- 注释标签
+    -->
+
+
+
+    <h1>标题标签 &lt;h1&gt; </h1>
+
+    定义锚点<a name=“top”></a>
+
+    <a href="http://www.w3school.com.cn/html/index.asp" target="_blank">w3school网站</a>上可以更详细的学习。
+    <a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank">MDN上</a>也可以学习。
+
+    <br />
+    <ul>
+        <li>
+            <b>粗体标签 &lt;b&gt; </b>
+        </li>
+        <li>
+            <i>斜体标签&lt;i&gt;</i>
+        </li>
+        <li>
+            <u>下划线标签&lt;u&gt;</u>
+        </li>
+        <li>
+            <p>
+                段落标签。&lt;p&gt;
+                <br /> 换行后，又添加了一行。
+            </p>哈哈哈
+        </li>
+        <li>
+            上标标签：&lt;sub&gt; &nbsp;&nbsp;&nbsp;&nbsp;3
+            <sup>2</sup>
+            <br /> 下标标签：&lt;sup&gt; &nbsp;&nbsp;&nbsp;&nbsp;O
+            <sub>3</sub>
+        </li>
+    </ul>
+
+
+    <p>
+        图片标签：
+        <br /> title属性，鼠标在图片上停留时给出的信息
+    </p>
+    <img src="../sources/luffy.jpg" alt="路飞" />
+    <img src="luffy.jpg" alt="路飞,文件不存在时显示该占位符" />
+    <img src="../sources/luffy.jpg" alt="路飞" width="300" title="title" />
+
+    <p>
+        marquee 标签：一测就蹦......
+    </p>
+
+    <hr />
+    <p>
+        表格标签，在这边使用正则表达式测试。
+    </p>
+
+    <table border="1" align="center" cellspacing="0" width="800" cellpadding="10">
+        <caption>
+            <font size="5"><b>Java中常用的正则规则</b></font>
+        </caption>
+
+        <tr>
+            <th>
+                规则
+            </th>
+            <th>
+                含义
+            </th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>字符Characters：</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                x
+            </td>
+            <td>
+                The character x，字符x
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \\
+            </td>
+            <td>
+                The backslash character，反斜线
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \n
+            </td>
+            <td>
+                The newline (line feed) character (‘\u000A’)，另起一行
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \r
+            </td>
+            <td>
+                The carriage-return character (‘\u000D’)，回车
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <b>字符类Character classes：</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                [abc]
+            </td>
+            <td>
+                a, b, or c。 a，b，或者c
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                [^abc]
+            </td>
+            <td>
+                Any character except a, b, or c (negation)。除了a,b,c
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                [a-zA-Z]
+            </td>
+            <td>
+                a through z or A through Z, inclusive (range)。所有的英文字母
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <b>预定义字符类Predefined character classes：</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                .
+            </td>
+            <td>
+                Any character，通配符。 \.表示字符串
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \d
+            </td>
+            <td>
+                A digit: [0-9]。所有数字
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \D
+            </td>
+            <td>
+                A non-digit: [^0-9]。非数字
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \s
+            </td>
+            <td>
+                A whitespace character: [ \t\n\x0B\f\r]。所有空字符
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \w
+            </td>
+            <td>
+                A word character: [a-zA-Z_0-9]。所有的英文字母和阿拉伯数据，和下划线。
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <b>边界匹配Boundary matchers：</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                ^
+            </td>
+            <td>
+                The beginning of a line。开头
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                $
+            </td>
+            <td>
+                The end of a line。结尾
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                \b
+            </td>
+            <td>
+                A word boundary。单词边界。\b详解
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <b>数量词Greedy quantifiers：</b>
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X?
+            </td>
+            <td>
+                X, once or not at all。至多0次
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X*
+            </td>
+            <td>
+                X, zero or more times。至少0次
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X+
+            </td>
+            <td>
+                X, one or more times。至少1次。
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X+
+            </td>
+            <td>
+                X, one or more times。至少1次。
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X{n}
+            </td>
+            <td>
+                exactly n times。只有n次。
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X{n,}
+            </td>
+            <td>
+                X, at least n times。至少n次。
+            </td>
+        </tr>
+        <tr>
+            <td align="center">
+                X{n,m}
+            </td>
+            <td>
+                X, at least n but not more than m times。至少n次，不超过m次。
+            </td>
+        </tr>
+    </table>
+    <br />
+    <br />
+    <br />
+
+
+
+
+
+
+    <hr />
+    <h1>特殊字符 </h1>
+    <font>这里只列出常用的，更多请查看<a href="http://114.xixik.com/character/" target="_blank">HTML 实体字符</a></font>
+    <br />
+    <br />
+    <table border="1px" width="500" align="center" cellpadding="10" cellspacing="0">
+        <caption>
+            常用实体字符
+        </caption>
+        <tr>
+            <th>
+                显示
+            </th>
+            <th>
+                实体字符
+            </th>
+        </tr>
+
+        <tr align="center">
+            <td>
+                小于号 &lt;
+            </td>
+            <td>
+                &amp;lt ;
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td>
+                大于号 &gt;
+            </td>
+            <td>
+                &amp;gt ;
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td>
+                &amp; 地址符
+            </td>
+            <td>
+                &amp;amp ;
+            </td>
+        </tr>
+
+        <tr align="center">
+            <td>
+                &quot; 双引号
+            </td>
+            <td>
+                &amp;quot ;
+            </td>
+        </tr>
+
+    </table>
+
+    <hr />
+    <h1>标签属性:</h1>
+    <font color="#123456" size="7">哈哈哈</font>
+    <br />
+    <font color="#ff0000" size="70">哈哈哈,最大就是7</font>
+
+    <hr />
+    <h1>列表：</h1>
+
+    <p>
+        有序列表
+    </p>
+    <ol start="3" type="A">
+        <li>
+            第一个
+        </li>
+        <li>
+            第二个
+        </li>
+        <li>
+            第三个
+        </li>
+    </ol>
+
+    <p> 无序列表 </p>
+    <ul type="circle">
+        <li>
+            无序一个
+        </li>
+        <li>
+            无序两个
+        </li>
+        <li>
+            无序三个
+        </li>
+    </ul>
+
+    <p>
+        定义列表。 自定义列表不仅仅是一列项目，而是项目及其注释的组合。 自定义列表以 &lt;dl&gt; 标签开始。每个自定义列表项以 &lt;dt&gt; 开始。每个自定义列表项的定义以 &lt;dd&gt; 开始。
+    </p>
+
+    <dl>
+        <dt>Coffee</dt>
+        <dd>Black hot drink</dd>
+        <dt>Milk</dt>
+        <dd>White cold drink</dd>
+    </dl>
+
+
+    <a href="#top">返回顶部</a>
+
+
+
+    <hr />
+    <div>
+      div1
+    </div>
+    <div>
+      div2
+    </div>
+    <span>span1</span>
+    <span>span2</span>
+
+</body>
+
+</html>
