@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <title>注册页面</title>
+    <meta charset="utf-8" />
+
+    <link href="regist.css" type="text/css" rel="stylesheet" />
+    <script src="regist.js" type="text/javascript"></script>
+</head>
+
+
+<body>
+    <form action="../js基础/jsLearn.html" method="post" onsubmit="return onSubmit()" onreset="onReset()">
+        <table border="1" align="center" width="60%" cellspacing="0" cellpadding="5">
+            <caption>
+                <font class="caption">用户注册</font>
+            </caption>
+
+            <tr>
+                <td class="firstTd">
+                    用户名：
+                </td>
+                <td>
+                    <input type="text" name="username" id="username" onblur="checkUsername()" />
+                    <span id="username_span">3-15任意字符</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    密&nbsp;&nbsp;&nbsp;&nbsp;码：
+                </td>
+                <td>
+                    <input type="password" name="password" id="password" onblur="checkPassword()" />
+                    <span id="password_span">6-12任意字符</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    确认密码：
+                </td>
+                <td>
+                    <input type="password" name="repassword" id="repassword" onblur="checkRepassword()" />
+                    <span id="repassword_span">两次密码不一致</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    Email：
+                </td>
+                <td>
+                    <input type="text" name="email" id="email" onblur="checkEmail()" />
+                    <span id="email_span">邮箱格式不正确</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    真实姓名：
+                </td>
+                <td>
+                    <input type="text" name="realName" id="realName" onblur="checkRealName()" />
+                    <span id="realName_span">必须是2-5个中文</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    省份：
+                </td>
+                <td>
+                    <select name="province" id="province" onblur="checkProvince()">
+                        <option>
+                            --请选择--
+                        </option>
+                        <option value="陕西">
+                            陕西
+                        </option>
+                        <option value="广东">
+                            广东
+                        </option>
+                        <option value="北京">
+                            北京
+                        </option>
+                    </select>
+                    <span id="province_span">请选择省份</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="firstTd">
+                    爱好：
+                </td>
+                <td>
+                    <input type="checkbox" name="hobby" id="chese" value="象棋" style="width:auto" onblur="checkHobby()" />象棋
+                    <input type="checkbox" name="hobby" id="running" value="跑步" style="width:auto" onblur="checkHobby()" />跑步
+                    <input type="checkbox" name="hobby" id="reading" value="读书" style="width:auto" onblur="checkHobby()" />读书
+                    <span id="hobby_span">请选择爱好</span>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" class="firstTd">
+                    <input type="reset" value="重置" style="width:60" />
+                    <input type="submit" value="注册" style="width:60" />
+                </td>
+            </tr>
+
+
+        </table>
+
+
+
+    </form>
+</body>
+
+</html>

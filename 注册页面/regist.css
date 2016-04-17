@@ -1,0 +1,15 @@
+.firstTd {
+    width: 20%;
+    text-align: center;
+}
+.caption {
+    font-size: 28;
+}
+input {
+    width: 40%;
+}
+span {
+    margin-left: 5;
+    color: #ff0000;
+    display: none;
+}
