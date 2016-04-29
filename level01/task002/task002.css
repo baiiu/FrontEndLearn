@@ -1,0 +1,99 @@
+body {
+    margin: 0px;
+    background: rgb(221, 222, 223);
+}
+
+/*
+头布局
+*/
+
+.header {
+    background-color: rgb(50, 51, 52);
+    height: 60px;
+    padding-left: 30px;
+}
+.navContainer {
+    float: right;
+    display: inline-block;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+}
+.nav {
+    display: inline;
+}
+.header img {
+    height: 40px;
+}
+
+/*文章布局*/
+
+.area {
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(202, 203, 204);
+    padding: 20px;
+}
+p {
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+h2 {
+    color: rgb(111, 111, 111);
+}
+.author {
+    font-size: 12px;
+    color: rgb(124, 108, 101);
+}
+.publishTime {
+    font-size: 12px;
+    color: rgb(124, 108, 101);
+}
+.beautifulImg {
+    display: inline-block;
+    padding: 15px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: grey;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.beautifulImgText {
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.imgLuffy {
+    width: 100px;
+    height: 100px;
+}
+.promptInfo {
+    color: rgb(123, 108, 101);
+}
+.tableTitle {
+    text-align: right;
+    vertical-align: top;
+}
+#submitButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    color: #fff;
+    background-color: rgb(52, 88, 201);
+}
+.footer {
+    background-color: rgb(50, 51, 52);
+    height: 60px;
+    margin-top: 20px;
+}
+#copyright {
+    color: #fff;
+    text-align: center;
+    display: block;
+    padding-top: 20px;
+}
