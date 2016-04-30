@@ -1,0 +1,136 @@
+body {
+    margin: 0px;
+    font-family: 'Microsoft YaHei';
+    background: #dedede;
+}
+
+/*头布局*/
+
+header {
+    background-color: rgb(50, 51, 52);
+    height: 60px;
+    padding-left: 30px;
+}
+header img {
+    height: 50px;
+    margin-bottom: 10px;
+}
+header nav {
+    float: right;
+    height: 60px;
+    margin-right: 10px;
+    line-height: 60px;
+}
+header nav ul {
+    padding: 0px;
+    margin: 0px;
+    margin-left: 20px;
+    display: inline-block;
+}
+header nav ul li a {
+    color: #fff;
+    font-size: 13px;
+}
+
+/*文章*/
+
+article, aside {
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 1px #848484;
+}
+article h2 {
+    color: rgb(111, 111, 111);
+}
+article h3 {
+    color: #808080;
+    font-size: 16px;
+}
+.author, .publishTime {
+    font-size: 12px;
+    line-height: 30px;
+    color: rgb(124, 108, 101);
+}
+article p {
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+article ul li {
+    list-style-type: none;
+}
+.imgLuffy {
+    width: 100px;
+    height: 100px;
+}
+article figure span {
+    text-align: center;
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+article figure {
+    margin: 10px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+.beautifulImgContainer {
+    margin-left: 20px;
+}
+table tr th {
+    color: #fff;
+    text-align: left;
+    background-color: #333;
+}
+table tfoot {
+    background: #ccc;
+}
+
+/*侧边栏*/
+
+aside h4 {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    border-left: 3px solid #ccc;
+}
+aside table {
+    table-layout: fixed;
+    border-spacing: 15px;
+}
+.tableTitle {
+    text-align: right;
+    vertical-align: top;
+}
+.promptInfo {
+    color: #aaa;
+    margin-top: 9px;
+}
+#submitButton {
+    width: 100%;
+    height: 40px;
+    font-size: 19px;
+    color: #fff;
+    background-color: #128fdc;
+    border: none;
+    border-radius: 10px;
+}
+#submitButton:hover {
+    background-color: #0063dc;
+}
+
+/*页脚*/
+
+footer {
+    background-color: #000;
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 15px;
+    color: #fff;
+}
