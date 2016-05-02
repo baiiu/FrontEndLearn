@@ -154,6 +154,16 @@
 该元素的实际宽度 =
 marginLeft + borderLeftWidth + paddingLeft + elementWidth + paddingRight + borderRightWidth + marginRight.
 
+添加属性：
+```
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+```
+使元素的内边距和边框不再会增加它的宽度，使用该width的宽度，这样就和Android一样了。即 width = marginLeft + elementWidth + marginRight;
+
 ## **CSS布局模型**
 布局模型与盒子模型都是CSS最基本、最核心的概念。布局模型建立在盒子模型的基础上。
 

@@ -1,0 +1,76 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    padding: 0px;
+    margin: 0px;
+}
+div {
+    border: 1px solid #999;
+    padding: 20px;
+}
+img {
+    width: 80px;
+    height: 80px;
+}
+
+/*
+遇到的问题：
+  1. 团队名称不能居中
+  查看别人的后，让img靠左漂浮，之后文字成环绕，再设置text-align为center.犀利！！
+*/
+
+
+/*各栏样式*/
+
+#left img {
+    float: left;
+}
+#left span {
+    text-align: center;
+    display: block;
+}
+#right img {
+    display: block;
+    margin-top: 20px;
+}
+#left, #center, #right {
+    background: #fff;
+}
+
+/*父布局*/
+
+#container {
+    /*添加min-width，浏览器大小变化时好看一点*/
+    min-width: 600px;
+    margin: 20px;
+    background: #eee;
+    position: relative;
+    min-height: 100px;
+    /*清除浮动*/
+    overflow: auto;
+}
+
+/*左栏float*/
+
+#left {
+    width: 200px;
+    float: left;
+}
+
+/*中间,使用Layer属性进行定位*/
+
+#center {
+    position: absolute;
+    left: 240px;
+    right: 160px;
+}
+
+/*右栏float*/
+
+#right {
+    padding-top: 0px;
+    float: right;
+}
