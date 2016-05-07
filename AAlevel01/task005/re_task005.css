@@ -1,34 +1,30 @@
 body {
     margin: 0px;
-    font-family: 'Microsoft YaHei';
-    background: #dedede;
+    padding: 0px;
+    min-width: 650px;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /*头布局*/
 
-header {
-    background-color: rgb(50, 51, 52);
-    height: 60px;
-    padding-left: 30px;
-}
 header img {
     height: 50px;
-    margin-bottom: 10px;
+    margin-left: 20px;
 }
 header nav {
     float: right;
     height: 60px;
-    margin-right: 10px;
     line-height: 60px;
 }
 header nav ul {
-    padding: 0px;
     margin: 0px;
-    margin-left: 20px;
+    padding: 0px;
     display: inline-block;
-}
-header nav ul li{
-  
+    margin: 0 12px;
 }
 header nav ul li a {
     color: #fff;
@@ -83,6 +79,7 @@ article figure {
 }
 .beautifulImgContainer {
     margin-left: 20px;
+    display: inline-block;
 }
 table tr th {
     color: #fff;
@@ -126,9 +123,49 @@ aside table {
     background-color: #0063dc;
 }
 
+/*
+遇到的问题：定位问题。
+
+目前使用百分比宽度来定位，很明显不准确。
+当浏览器缩小时，main就会被absolute遮住
+
+
+使用float来控制：
+html代码里，aside先写，使用float:right放到右边
+main的width使用calc()来计算
+body添加min-width来避免极端缩小
+
+*/
+
+
+/*侧边栏处理*/
+
+header {
+    min-width: 600px;
+    background: rgb(50, 51, 52);
+    height: 60px;
+    /*position: fixed;固定定位，效果不好
+    top: 0px;*/
+    width: 100%;
+}
+main {
+  width: calc(100% - 390px);
+}
+aside {
+    float: right;
+    width: 360px;
+    background-color: #ffffff;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    box-shadow: 1px 1px 2px 1px #848484;
+}
+
 /*页脚*/
 
 footer {
+    /*清除浮动，学了一遍 10steps*/
     background-color: #000;
     height: 60px;
     margin-top: 20px;

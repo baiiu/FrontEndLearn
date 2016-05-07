@@ -28,8 +28,14 @@ img {
 #left img {
     float: left;
 }
+
+/*使用第二种居中方法也可以，span为inline-block或者block的，父元素text-align:center
 #left span {
     text-align: center;
+    display: block;
+}*/
+
+#left span {
     display: block;
 }
 #right img {
@@ -56,11 +62,12 @@ img {
 /*左栏float*/
 
 #left {
+    text-align: center;
     width: 200px;
     float: left;
 }
 
-/*中间,使用Layer属性进行定位*/
+/*中间,使用定位属性进行定位*/
 
 #center {
     position: absolute;

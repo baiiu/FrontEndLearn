@@ -1,0 +1,145 @@
+/*定位*/
+
+
+/*步骤2，测试relative*/
+
+
+/*#div-1 {
+    position: relative;
+    top: 20px;
+    left: -40px;
+}*/
+
+
+/*步骤3，测试absolute*/
+
+
+/*#div-1a {
+ position:absolute;
+ top:0;
+ right:0;
+ width:200px;
+}*/
+
+
+/*步骤4，relative + position:absolute，实现div-1a在div-1的右上角
+position:absolute 相对于其最近的 具有定位属性的父包含块进行定位。
+
+*/
+
+
+/*#div-1 {
+    position: relative;
+}
+#div-1a {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px;
+}*/
+
+
+/*步骤5，两列绝对定位,这样会遮住其他元素*/
+
+/*#div-1 {
+    position: relative;
+}
+#div-1a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+}
+#div-1b {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+}*/
+
+/*步骤6，解决步骤5的问题，不让它遮住其他元素，
+给父元素这是高度，大于两列就OK了，但不是完全之策。*/
+/*#div-1 {
+    position: relative;
+
+    height: 250px;
+}
+#div-1a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 200px;
+}
+#div-1b {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 200px;
+}*/
+
+/*步骤7，高度肯定会发生变化，针对这种高度不定的情况，绝对定位不好用，
+我们使用float属性来完成*/
+/*#div-1a {
+ float:left;
+ width:200px;
+}*/
+
+
+/*步骤8，多列浮动，将两列都向左浮动，可以实现两列并列
+很明显，浮动后，所有元素都重新排列了。
+都在float元素旁边环绕了
+*/
+/*#div-1a{
+  float:left;
+  width: 150px;
+}
+#div-1b{
+  float: left;
+  width: 150px;
+}*/
+
+/*步骤9，我们不想让其他元素重排，可以使用清除浮动来处理*/
+
+#div-1a{
+  float:left;
+  width: 150px;
+}
+#div-1b{
+  float: left;
+  width: 150px;
+}
+#div-1c{
+  clear: both;
+}
+
+
+
+/*样式*/
+
+#div-before, #div-after {
+    background-color: #eee;
+    color: #000;
+}
+#div-before p, #div-after p {
+    margin: 0px;
+}
+#div-1 {
+    width: 400px;
+    background-color: #000;
+    color: #fff;
+}
+#div-1-padding {
+    padding: 10px;
+}
+#div-1a {
+    background-color: #888;
+    color: #fff;
+}
+#div-1b {
+    background-color: #666;
+    color: #fff;
+}
+#div-1c {
+    background-color: #aaa;
+    color: #fff;
+}
