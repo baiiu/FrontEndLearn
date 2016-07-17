@@ -22,12 +22,12 @@ float属性可以用来处理高度不定的情况，也可以使用该属性实
 可以使用`clear`属性清除浮动，让使用了该属性的元素按照正常排列。
 
 其他资料：
-_The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it._
 
-left属性： _the element must float on the left side of its containing block._
+- _The float CSS property specifies that an element should be taken from the normal flow and placed along the left or right side of its container, where text and inline elements will wrap around it._
 
-How floats are positioned:
+- left属性： _the element must float on the left side of its containing block._
 
+- How floats are positioned:  
 _As mentioned above, when an element is floated it is taken out of the normal flow of the document. It is shifted to the left or right until it touches the edge of its containing box or another floated element._
 一旦设置了float:left它就会一直往左靠，直到到达父控件边缘或其他float的元素。
 
@@ -37,19 +37,19 @@ _As mentioned above, when an element is floated it is taken out of the normal fl
 
 ### **1-2 定位属性Position**
 
-- `position:static`
+- `position:static`  
 遵循html本身的布局规则。没啥用。
 
-- `position:relative`
+- `position:relative`  
 该属性**并不会**把元素从文档流中拖出来。
 使用`left`等属性进行元素偏移时，仅仅偏移的是它的视图，它仍然占据原始位置（即其他同级元素并不会跟着它一起偏移，还是不动，还是在原来的位置）。
 一般没啥用，说不定也会有用。
 
-- `position:absolute`
+- `position:absolute`  
 该元素**会**把元素从文档流中拖出来，相对于其 最接近的一个具有定位属性属性的父包含块进行绝对定位。
 其他元素会占据该元素的位置。
 
-- `position:fixed`
+- `position:fixed`  
 相对于视图本身移动(浏览器网页窗口)。所以，它不会随浏览器窗口滚动条的滚动而变化。固定定位最常见的一种用途就是在页面中创建一个固定头部、或者脚部、或者固定页面的一个侧面。
 
 
