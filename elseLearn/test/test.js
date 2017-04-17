@@ -20,3 +20,41 @@ function getImg() {
 
     // alert(imgurl);
 }
+
+
+setupWebViewJavascriptBridge(function(bridge) {
+    bridge.registerHandler('elementToHeight', function(id, responseCallback) {
+        var element = document.getElementById('referenceSection');
+        var actualTop = element.offsetTop;　　　　
+        var current = element.offsetParent;　　　　
+        while (current !== null) {
+            actualTop += current.offsetTop;　　　　　　
+            current = current.offsetParent;　
+        }
+        responseCallback(actualTop);
+    });
+});
+
+
+
+function getTop() {
+    var image = document.getElementById("image");
+    var actualTop = element.offsetTop;　　　　
+    var current = element.offsetParent;　　　　
+    while (current !== null) {
+        actualTop += current.offsetTop;　　　　　　
+        current = current.offsetParent;　
+    }
+    return actualTop;　　
+
+}
+
+function getElementTop(element) {
+    var actualTop = element.offsetTop;　　　　
+    var current = element.offsetParent;　　　　
+    while (current !== null) {
+        actualTop += current.offsetTop;　　　　　　
+        current = current.offsetParent;　
+    }
+    return actualTop;　　
+}

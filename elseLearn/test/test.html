@@ -6,6 +6,59 @@
 
 
     <script src="test.js" type="text/javascript"></script>
+
+
+    <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function(event) {
+
+            var is_ios = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+            function setupWebViewJavascriptBridge(callback) {
+                if (is_ios) {
+                    if (window.WebViewJavascriptBridge) {
+                        return callback(window.WebViewJavascriptBridge);
+                    }
+                    if (window.WVJBCallbacks) {
+                        return window.WVJBCallbacks.push(callback);
+                    }
+                    window.WVJBCallbacks = [callback];
+                    var WVJBIframe = document.createElement('iframe');
+                    WVJBIframe.style.display = 'none';
+                    WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+                    document.documentElement.appendChild(WVJBIframe);
+                    setTimeout(function() {
+                        document.documentElement.removeChild(WVJBIframe);
+                    }, 0);
+                } else {
+                    if (window.WebViewJavascriptBridge) {
+                        callback(WebViewJavascriptBridge);
+                    } else {
+                        document.addEventListener('WebViewJavascriptBridgeReady', function() {
+                            callback(WebViewJavascriptBridge);
+                        }, false);
+                    }
+                }
+            }
+
+
+            setupWebViewJavascriptBridge(function(bridge) {
+                /* Initialize your app here */
+                if (!is_ios) {
+                    bridge.init();
+                }
+            });
+
+            setupWebViewJavascriptBridge(function(bridge) {
+                bridge.registerHandler('elementToHeight', function(id, responseCallback) {
+                    var image = document.getElementById('referenceSection');
+                    responseCallback(image.getBoundingClientRect().top);
+                });
+            });
+
+            window.setupWebViewJavascriptBridge = setupWebViewJavascriptBridge;
+        });
+    </script>
+
 </head>
 
 
@@ -13,17 +66,21 @@
 
     <button onclick="return getImg()">点击</button>
 
+
     <p>
         <a target="_blank" href="https://www.google.com">
             <img src="../../sources/luffy.jpg" alt="videoplay" />
         </a>
     </p>
 
-    <p><img alt="111" src="../../sources/luffy.jpg" data-img-size-val="640,475" /\></p>
-    <p><img alt="222" src="../../sources/luffy.jpg" data-img-size-val="640,273" /\></p>
-    <p><img alt="333" src="../../sources/luffy.jpg" data-img-size-val="640,456" /\></p>
-    <p><img alt="444" src="../../sources/luffy.jpg" data-img-size-val="640,146" /\></p>
-    <p><img alt="555" src="../../sources/luffy.jpg" data-img-size-val="500,500" /\></p>
+    <p><img alt="111" src="../../sources/luffy.jpg" data-img-size-val="640,475" /></p>
+
+    <p><img alt="222" src="../../sources/luffy.jpg" data-img-size-val="640,273" id="image" onclick="getTop()" /></p>
+
+
+    <p><img alt="333" src="../../sources/luffy.jpg" data-img-size-val="640,456" /></p>
+    <p><img alt="444" src="../../sources/luffy.jpg" data-img-size-val="640,146" /></p>
+    <p><img alt="555" src="../../sources/luffy.jpg" data-img-size-val="500,500" /></p>
 
 
 
